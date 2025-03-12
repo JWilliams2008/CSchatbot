@@ -13,62 +13,51 @@ async function sendMessage() {
     document.getElementById('userInput').value = '';
     
     // Check if the user message contains predefined economic terms
-    const predefinedResponses = {
-        'hi': 'Bot: Hi! Please ask me if you want a definition of an economic term or if you want me to ask you a practice question.',
-        'gdp': 'Bot: GDP stands for Gross Domestic Product. It is the total monetary or market value of all the finished goods and services produced within a country\'s borders in a specific time period.',
-        'ad': 'Bot: AD stands for aggregate demand and it measures the total amount of demand in an economy. Its equation is AD = C + I + G + (X-M)',
-        'inflation': 'Bot: Inflation is the rate at which the general level of prices for goods and services is rising, and subsequently, purchasing power is falling.',
-        'unemployment': 'Bot: Unemployment refers to the situation where individuals who are capable of working, are actively seeking work but are unable to find any work.',
-        'interest rate': 'Bot: The interest rate is the percentage at which interest is charged or paid for the use of money.',
-        'fiscal policy': 'Bot: Fiscal policy refers to government spending and tax policies to influence a country\'s economic activity.',
-        'monetary policy': 'Bot: Monetary policy involves the management of money supply and interest rates by central banks to control inflation and stabilize the currency.',
-        'inflation rate': 'Bot: The inflation rate is the percentage increase in the average price level of goods and services in an economy over time.',
-        'supply and demand': 'Bot: Supply and demand is the relationship between the availability of a good or service and the demand for that good or service, which affects its price.',
-        'market equilibrium': 'Bot: Market equilibrium is the point where the supply of goods matches demand, resulting in a stable market price.',
-        'balance of payments': 'Bot: The balance of payments is a financial statement that summarizes a country\'s economic transactions with the rest of the world.',
-        'exchange rate': 'Bot: The exchange rate is the value of one currency for the purpose of conversion to another currency.',
-        'national debt': 'Bot: National debt is the total amount of money that a government owes to external creditors and domestic lenders.',
-        'consumer price index': 'Bot: The Consumer Price Index (CPI) is an index that measures the average change over time in the prices paid by consumers for a basket of goods and services.',
-        'opportunity cost': 'Bot: Opportunity cost refers to the value of the next best alternative foregone when a decision is made.',
-        'recession': 'Bot: A recession is a period of temporary economic decline during which trade and industrial activity are reduced, typically identified by a fall in GDP.',
-        'stagflation': 'Bot: Stagflation is an economic condition characterized by high inflation, high unemployment, and stagnant economic growth.',
-        'monopoly': 'Bot: A monopoly exists when a single company or group owns all or nearly all of the market for a given type of product or service.',
-        'oligopoly': 'Bot: An oligopoly is a market structure in which a small number of firms control the market for a particular product or service.',
-        'deadweight loss': 'Bot: Deadweight loss refers to the loss of economic efficiency that can occur when the equilibrium for a good or service is not achieved or is not achievable.',
-        'consumer surplus': 'Bot: Consumer surplus is the difference between what consumers are willing to pay for a good or service and what they actually pay.',
-        'producer surplus': 'Bot: Producer surplus is the difference between the price a producer is willing to sell a good for and the price they actually receive.',
-        'elasticity': 'Bot: Elasticity in economics measures how the quantity demanded or supplied of a good responds to changes in price.',
-        'savings': 'Bot: Savings refers to the portion of income that is not spent on consumption, often stored in banks or invested.',
-        'investment': 'Bot: Investment refers to the purchase of goods that are used to produce other goods and services, often associated with long-term growth.',
-        'capital': 'Bot: Capital refers to assets that are used to produce goods and services, such as machinery, buildings, or financial resources.',
-        'market failure': 'Bot: Market failure occurs when the allocation of goods and services by a free market is not efficient, leading to a loss of economic welfare.',
-        'income inequality': 'Bot: Income inequality refers to the uneven distribution of income across the population.',
-        'trade deficit': 'Bot: A trade deficit occurs when a country imports more goods and services than it exports.',
-        'tariff': 'Bot: A tariff is a tax imposed on imported goods to protect domestic industries or generate government revenue.',
-        'subsidy': 'Bot: A subsidy is a government payment to encourage the production or consumption of a particular good or service.',
-        'public good': 'Bot: Public goods are goods that are non-excludable and non-rivalrous, meaning they are available to all and one person\'s use does not reduce availability for others.',
-        'externality': 'Bot: An externality is a side effect or consequence of an industrial or commercial activity that affects other parties who did not choose to be involved in that activity.'
-    };
+const predefinedResponses = {
+    'hi': 'Bot: Hi! Please ask me if you want a definition of a computer science term or if you want me to ask you a practice question.',
+    'algorithm': 'Bot: An algorithm is a step-by-step procedure for solving a problem or performing a task, often used in computing.',
+    'data structure': 'Bot: A data structure is a way of organizing and storing data so that it can be accessed and modified efficiently.',
+    'binary': 'Bot: Binary is a number system that uses only two digits: 0 and 1. It is the foundation of all modern computing systems.',
+    'encryption': 'Bot: Encryption is the process of converting data into a code to prevent unauthorized access.',
+    'debugging': 'Bot: Debugging is the process of identifying and fixing errors or bugs in software or hardware.',
+    'compilation': 'Bot: Compilation is the process of converting source code written in a high-level programming language into machine code that a computer can execute.',
+    'oop': 'Bot: Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects," which can contain data and methods.',
+    'cloud computing': 'Bot: Cloud computing is the delivery of computing services such as storage, processing, and networking over the internet.',
+    'machine learning': 'Bot: Machine learning is a subset of artificial intelligence (AI) that involves algorithms allowing computers to learn from data without being explicitly programmed.',
+    'operating system': 'Bot: An operating system is software that manages hardware and software resources on a computer, providing services to other software.',
+    'networking': 'Bot: Networking refers to the practice of connecting computers and other devices to share data and resources.',
+    'ip address': 'Bot: An IP address (Internet Protocol address) is a unique string of numbers assigned to each device connected to a network.',
+    'algorithm complexity': 'Bot: Algorithm complexity refers to the computational cost of an algorithm, often expressed in terms of time (time complexity) and space (space complexity).',
+    'compiler': 'Bot: A compiler is a program that translates high-level programming code into machine-readable code or an intermediate code.',
+    'database': 'Bot: A database is an organized collection of data, typically stored electronically, that can be accessed, managed, and updated efficiently.',
+    'json': 'Bot: JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write and for machines to parse and generate.',
+    'api': 'Bot: An API (Application Programming Interface) is a set of rules that allows one software application to interact with another.',
+    'frontend': 'Bot: Frontend refers to the part of a web application or website that users interact with directly, including the design, layout, and functionality.',
+    'backend': 'Bot: Backend refers to the server-side of a web application, where data processing and storage occur, and the frontend is served to users.',
+    'big data': 'Bot: Big data refers to large and complex data sets that require specialized tools and techniques to store, process, and analyze.',
+    'artificial intelligence': 'Bot: Artificial intelligence (AI) is the simulation of human intelligence processes by machines, particularly computer systems.'
+};
 
-    // Function to ask an economic question
-    const askEconomicQuestion = () => {
-        const questions = [
-            { question: "Bot: What is the formula for calculating GDP? (Hint: Think of the components of GDP)", correctAnswer: "C + I + G + (X-M)" },
-            { question: "Bot: What does inflation refer to in economics?", correctAnswer: "The rate at which the general level of prices for goods and services is rising." },
-            { question: "Bot: What is the law of demand?", correctAnswer: "As the price of a good or service increases, the quantity demanded decreases." },
-            { question: "Bot: What is the difference between nominal GDP and real GDP?", correctAnswer: "Nominal GDP is measured using current prices, while real GDP is adjusted for inflation." },
-            { question: "Bot: What is a trade deficit?", correctAnswer: "A trade deficit occurs when a country imports more goods and services than it exports." },
-            { question: "Bot: What is the Consumer Price Index (CPI)?", correctAnswer: "The Consumer Price Index (CPI) measures the average change over time in the prices paid by consumers for a basket of goods and services." },
-            { question: "Bot: What is the main goal of monetary policy?", correctAnswer: "To control inflation and stabilize the currency by managing the money supply and interest rates." },
-            { question: "Bot: What is an oligopoly?", correctAnswer: "An oligopoly is a market structure where a small number of firms control the market for a particular good or service." },
-            { question: "Bot: What is the main difference between a public good and a private good?", correctAnswer: "A public good is non-excludable and non-rivalrous, while a private good is excludable and rivalrous." },
-            { question: "Bot: What is opportunity cost?", correctAnswer: "Opportunity cost is the value of the next best alternative foregone when a decision is made." },
-        ];
+// Function to ask a computer science question
+const askComputerScienceQuestion = () => {
+    const questions = [
+        { question: "Bot: What is an algorithm?", correctAnswer: "An algorithm is a step-by-step procedure for solving a problem or performing a task." },
+        { question: "Bot: What is a data structure?", correctAnswer: "A data structure is a way of organizing and storing data so that it can be accessed and modified efficiently." },
+        { question: "Bot: What is the purpose of encryption?", correctAnswer: "Encryption is the process of converting data into a code to prevent unauthorized access." },
+        { question: "Bot: What is the difference between a compiler and an interpreter?", correctAnswer: "A compiler translates the entire source code into machine code before execution, while an interpreter translates and executes the code line by line." },
+        { question: "Bot: What is OOP (Object-Oriented Programming)?", correctAnswer: "OOP is a programming paradigm based on the concept of objects that contain both data and methods." },
+        { question: "Bot: What does a cloud computing service provide?", correctAnswer: "Cloud computing delivers computing services such as storage, processing, and networking over the internet." },
+        { question: "Bot: What is a database?", correctAnswer: "A database is an organized collection of data that can be accessed, managed, and updated efficiently." },
+        { question: "Bot: What is the purpose of an API?", correctAnswer: "An API allows one software application to interact with another by defining a set of rules for communication." },
+        { question: "Bot: What is the difference between frontend and backend?", correctAnswer: "Frontend is the part of a web application that users interact with, while backend is the server-side where data processing and storage occur." },
+        { question: "Bot: What is machine learning?", correctAnswer: "Machine learning is a subset of AI that involves algorithms allowing computers to learn from data without being explicitly programmed." }
+    ];
 
-        // Randomly select a question from the list
-        const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
-        return randomQuestion;
-    };
+    // Select a random question from the list
+    const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+    return randomQuestion;
+};
+
 
     // If the user types "question", ask a new question
     if (userInput.toLowerCase().includes('question') && !currentQuestion) {

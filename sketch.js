@@ -62,7 +62,6 @@ const predefinedResponses = {
     'containerization': 'Bot: Containerization involves packaging software and its dependencies together in a container that can run consistently across different environments.',
     'multithreading': 'Bot: Multithreading is a technique in programming where multiple threads run independently but share the same resources to improve performance.',
     'load balancer': 'Bot: A load balancer is a device or software that distributes network or application traffic across multiple servers to ensure efficient resource utilization and prevent overload.'
-    'CPU': 'Bot: The CPU controls all the instructions in a computer.',
 };
 
 // Function to ask a computer science question

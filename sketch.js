@@ -35,10 +35,10 @@ const predefinedResponses = {
     'frontend': 'Bot: Frontend refers to the part of a web application or website that users interact with directly, including the design, layout, and functionality.',
     'backend': 'Bot: Backend refers to the server-side of a web application, where data processing and storage occur, and the frontend is served to users.',
     'big data': 'Bot: Big data refers to large and complex data sets that require specialized tools and techniques to store, process, and analyze.',
-    'artificial intelligence': 'Bot: Artificial intelligence (AI) is the simulation of human intelligence processes by machines, particularly computer systems.'
-    'stack': 'Bot: A stack is a data structure that uses a first in last out system.'
-    'queue': 'Bot: A queue is a data structure that uses a last in first out system.'
-    'RAM': 'RAM holds data/instructions taht are currently in use.'
+    'artificial intelligence': 'Bot: Artificial intelligence (AI) is the simulation of human intelligence processes by machines, particularly computer systems.',
+    'stack': 'Bot: A stack is a data structure that uses a first in last out system.',
+    'queue': 'Bot: A queue is a data structure that uses a last in first out system.',
+    'RAM': 'RAM holds data/instructions taht are currently in use.',
     'cache': 'Bot: Cache is a small, fast memory storage used to store frequently accessed data for quick retrieval, improving system performance.',
     'recursion': 'Bot: Recursion is a programming technique where a function calls itself to solve a problem by breaking it into smaller instances of the same problem.',
     'virtualization': 'Bot: Virtualization is the creation of virtual versions of resources such as servers, storage, or networks to allow for efficient resource utilization and isolation.',
@@ -62,7 +62,7 @@ const predefinedResponses = {
     'containerization': 'Bot: Containerization involves packaging software and its dependencies together in a container that can run consistently across different environments.',
     'multithreading': 'Bot: Multithreading is a technique in programming where multiple threads run independently but share the same resources to improve performance.',
     'load balancer': 'Bot: A load balancer is a device or software that distributes network or application traffic across multiple servers to ensure efficient resource utilization and prevent overload.'
-    'CPU': 'Bot: The CPU controls all the instructions in a computer.'
+    'CPU': 'Bot: The CPU controls all the instructions in a computer.',
 };
 
 // Function to ask a computer science question

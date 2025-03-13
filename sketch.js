@@ -36,6 +36,33 @@ const predefinedResponses = {
     'backend': 'Bot: Backend refers to the server-side of a web application, where data processing and storage occur, and the frontend is served to users.',
     'big data': 'Bot: Big data refers to large and complex data sets that require specialized tools and techniques to store, process, and analyze.',
     'artificial intelligence': 'Bot: Artificial intelligence (AI) is the simulation of human intelligence processes by machines, particularly computer systems.'
+    'stack': 'Bot: A stack is a data structure that uses a first in last out system.'
+    'queue': 'Bot: A queue is a data structure that uses a last in first out system.'
+    'RAM': 'RAM holds data/instructions taht are currently in use.'
+    'cache': 'Bot: Cache is a small, fast memory storage used to store frequently accessed data for quick retrieval, improving system performance.',
+    'recursion': 'Bot: Recursion is a programming technique where a function calls itself to solve a problem by breaking it into smaller instances of the same problem.',
+    'virtualization': 'Bot: Virtualization is the creation of virtual versions of resources such as servers, storage, or networks to allow for efficient resource utilization and isolation.',
+    'blockchain': 'Bot: Blockchain is a decentralized and distributed ledger technology that securely records transactions across many computers to ensure data integrity.',
+    'sql': 'Bot: SQL (Structured Query Language) is a programming language used to manage and manipulate relational databases.',
+    'rest': 'Bot: REST (Representational State Transfer) is an architectural style for designing networked applications, typically using HTTP and stateless communication.',
+    'http': 'Bot: HTTP (Hypertext Transfer Protocol) is the protocol used for transmitting web pages over the internet.',
+    'https': 'Bot: HTTPS (Hypertext Transfer Protocol Secure) is a secure version of HTTP that uses encryption to protect data transmitted over the internet.',
+    'git': 'Bot: Git is a version control system that tracks changes in files and allows multiple people to collaborate on software development.',
+    'docker': 'Bot: Docker is a platform for developing, shipping, and running applications inside lightweight, portable containers.',
+    'algorithmic trading': 'Bot: Algorithmic trading involves using computer algorithms to automate the buying and selling of financial assets based on predefined criteria.',
+    'gpu': 'Bot: A GPU (Graphics Processing Unit) is a hardware component designed to accelerate graphics rendering, often used in gaming, AI, and scientific computing.',
+    'oauth': 'Bot: OAuth is an open standard for access delegation, commonly used for token-based authentication and authorization in web applications.',
+    'version control': 'Bot: Version control is the management of changes to source code or files over time, allowing developers to track and collaborate on changes.',
+    'semaphore': 'Bot: A semaphore is a synchronization primitive used in programming to control access to shared resources, preventing race conditions.',
+    'hashing': 'Bot: Hashing is the process of converting data into a fixed-size value (a hash) using a hash function, often used in data structures and security.',
+    'ipv6': 'Bot: IPv6 is the most recent version of the Internet Protocol (IP), designed to replace IPv4 and provide more unique addresses due to the growing number of devices connected to the internet.',
+    'restful api': 'Bot: A RESTful API is an API designed based on REST principles, using standard HTTP methods like GET, POST, PUT, and DELETE for communication.',
+    'data mining': 'Bot: Data mining is the process of discovering patterns, correlations, and useful information from large datasets using statistical and computational methods.',
+    'object': 'Bot: An object is an instance of a class in object-oriented programming, representing an entity with both data and methods that operate on that data.',
+    'containerization': 'Bot: Containerization involves packaging software and its dependencies together in a container that can run consistently across different environments.',
+    'multithreading': 'Bot: Multithreading is a technique in programming where multiple threads run independently but share the same resources to improve performance.',
+    'load balancer': 'Bot: A load balancer is a device or software that distributes network or application traffic across multiple servers to ensure efficient resource utilization and prevent overload.'
+    'CPU': 'Bot: The CPU controls all the instructions in a computer.'
 };
 
 // Function to ask a computer science question

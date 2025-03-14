@@ -87,7 +87,7 @@ const askComputerScienceQuestion = () => {
 
     // If the user types "question", ask a new question
     if (userInput.toLowerCase().includes('question') && !currentQuestion) {
-        const { question, correctAnswer } = askEconomicQuestion();
+        const { question, correctAnswer } = askComputerScienceQuestion();
         currentQuestion = { question, correctAnswer }; // Store the current question and correct answer
         
         // Display the question to the user
@@ -134,7 +134,7 @@ const askComputerScienceQuestion = () => {
 
     // If no condition is met, show an error message
     const errorMessage = document.createElement('div');
-    errorMessage.textContent = "Bot: Sorry, I didn't understand that. Please ask about an economic term or request a practice question.";
+    errorMessage.textContent = "Bot: Sorry, I didn't understand that. Please ask about an economic term or request a practice question by typing question";
     chatbox.appendChild(errorMessage);
     chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
 }
